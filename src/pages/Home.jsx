@@ -14,6 +14,9 @@ import {
   FaHandsHelping,
 } from "react-icons/fa";
 
+// ✅ Import hero image correctly for Vite/Vercel
+import heroImg from "../assets/hero.svg";
+
 export default function Home() {
   const location = useLocation();
 
@@ -116,8 +119,9 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:w-1/2 flex justify-center" data-aos="fade-left">
+            {/* ✅ Correctly imported image usage */}
             <img
-              src="/src/assets/hero.svg"
+              src={heroImg}
               alt="Volunteers donating food"
               className="w-full max-w-md mx-auto"
             />
