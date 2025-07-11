@@ -14,9 +14,6 @@ import {
   FaHandsHelping,
 } from "react-icons/fa";
 
-// ✅ Import hero image correctly for Vite/Vercel
-import heroImg from "../assets/hero.svg";
-
 export default function Home() {
   const location = useLocation();
 
@@ -119,9 +116,8 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:w-1/2 flex justify-center" data-aos="fade-left">
-            {/* ✅ Correctly imported image usage */}
             <img
-              src={heroImg}
+              src="/src/assets/hero.svg"
               alt="Volunteers donating food"
               className="w-full max-w-md mx-auto"
             />
@@ -156,22 +152,30 @@ export default function Home() {
               {
                 title: "Sign Up",
                 desc: "Join as Donor or NGO",
+                img: "/signup.png",
               },
               {
                 title: "Post / Browse",
                 desc: "List food or view offers nearby",
+                img: "/post.png",
               },
               {
                 title: "Claim & Deliver",
                 desc: "NGOs collect and feed the hungry",
+                img: "/claim.png",
               },
             ].map((step, i) => (
               <div
                 key={i}
-                className="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition"
+                className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col items-center"
                 data-aos="fade-up"
                 data-aos-delay={i * 200}
               >
+                <img
+                  src={step.img}
+                  alt={step.title}
+                  className="w-20 h-20 object-contain mb-4"
+                />
                 <h3 className="text-xl font-semibold text-[#2D9C6A] mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.desc}</p>
               </div>
