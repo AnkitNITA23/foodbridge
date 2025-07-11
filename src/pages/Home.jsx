@@ -117,7 +117,7 @@ export default function Home() {
           </div>
           <div className="lg:w-1/2 flex justify-center" data-aos="fade-left">
             <img
-              src="/public/hero.svg"
+              src="/hero.svg"
               alt="Volunteers donating food"
               className="w-full max-w-md mx-auto"
             />
