@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import {
   FaArrowRight,
   FaInfoCircle,
@@ -107,12 +107,12 @@ export default function Home() {
               >
                 <FaInfoCircle /> Learn More
               </a>
-              <a
-                href="/signup"
+              <Link
+                to="/signup"
                 className="bg-white border-2 border-[#2D9C6A] text-[#2D9C6A] px-6 py-3 rounded-full font-semibold hover:bg-[#2D9C6A] hover:text-white transition flex items-center gap-2"
               >
                 <FaUserCheck /> Get Started
-              </a>
+              </Link>
             </div>
           </div>
           <div className="lg:w-1/2 flex justify-center" data-aos="fade-left">
@@ -216,12 +216,12 @@ export default function Home() {
           <p className="text-lg mb-6">
             Join FoodBridge today and turn surplus into sustenance.
           </p>
-          <a
-            href="/signup"
+          <Link
+            to="/signup"
             className="bg-white text-[#2D9C6A] px-8 py-4 rounded-full font-bold hover:brightness-105 transition inline-flex items-center gap-2"
           >
             <FaArrowRight /> Get Started
-          </a>
+          </Link>
         </div>
       </section>
 
