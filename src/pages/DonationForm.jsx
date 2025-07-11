@@ -119,7 +119,7 @@ export default function DonationForm() {
         const fields = {
           ngo_email: ngo.email,
           subject: "🍱 New Food Donation Available Near You!",
-          message: `Hello ${ngo.name || "NGO"},\n\nA new donation has been posted in your area (${pincode}) by donor ${donorName}.\n\n🧾 Title: ${foodTitle}\n📍 Pincode: ${pincode}\n\nPlease login to FoodBridge to claim it:\nhttps://foodbridge-pi.vercel.app/`
+          message: `Hello ${ngo.name || "NGO"},\n\nA new donation has been posted in your area (${pincode}) by donor ${donorName}.\n\n🧾 Title: ${foodTitle}\n📍 Pincode: ${pincode}\n\nPlease login to FoodBridge to claim it:\nhttps://foodbridge-theta.vercel.app/`
         };
 
         for (const key in fields) {
